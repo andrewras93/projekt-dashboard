@@ -1,1 +1,1 @@
-{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,SAAU,CACV,wBAAiB,CAAjB,qBAAiB,CAAjB,oBAAiB,CAAjB,gBAAiB","file":"styles.css","sourcesContent":["body{\r\n  margin: 0;\r\n  padding: 0;\r\n  user-select: none;\r\n}"]}
+{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,SAAU,CACV,wBAAiB,CAAjB,qBAAiB,CAAjB,oBAAiB,CAAjB,gBAAiB,CAGnB,GACE,oBAAqB","file":"styles.css","sourcesContent":["body{\r\n  margin: 0;\r\n  padding: 0;\r\n  user-select: none;\r\n}\r\n\r\nli{\r\n  list-style-type: none;\r\n}"]}
