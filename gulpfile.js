@@ -34,5 +34,8 @@ function js(){
     );
 }
 
+const build = gulp.parallel(styles, js);
+
 exports.styles = styles;
 exports.js = js;
+exports.build = build;
