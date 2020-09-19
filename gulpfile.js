@@ -24,10 +24,12 @@ function js(){
 
     return(
         gulp.src(["js/*.js", "!js/*.min.js"])
+            .pipe(sourcemaps.init())
             .pipe(terser())
             .pipe(rename({
                 suffix: ".min"
             }))
+            .pipe(sourcemaps.write("."))
             .pipe(gulp.dest("js"))
     );
 }
