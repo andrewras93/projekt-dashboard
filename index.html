@@ -14,6 +14,7 @@
 
     <script src="js/script.js"></script>
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +22,53 @@
 
 <body>
 
+    <header>
+        <i class="material-icons">menu</i>
+        <a href="#">Logged In As: <strong>Admin</strong></a>
+            <nav>
+                <ul>
+                    <li><i class="material-icons">person_outline</i><a href="#">Personal</a></li>
+                    <li><i class="material-icons">people_outline</i><a href="#">Users</a></li>
+                    <li><i class="material-icons">settings</i><a href="#">Settings</a></li>
+                    <li><i class="material-icons">help_outline</i><a href="#">Support</a></li>
+                </ul>
+            </nav>
+        <a href="#">Log Out</a>
+    </header>
+
+    <main>
+        <h1>Dashboard</h1>
+        <div class="container">
+            <div class="card">
+                <i class="material-icons">content_copy</i><h2>Pages</h2>
+                <img src="images/undraw_wordpress_utxt.svg" alt="">
+                <p>Manage Pages</p>
+                <p>Total Pages: <strong>1</strong></p>
+                <p>Last Added: Home</p>
+            </div>
+            <div class="card">
+                <i class="material-icons">perm_media</i><h2>Media</h2>
+                <img src="images/undraw_Image__folder_re_hgp7.svg" alt="">
+                <p>Manage Files</p>
+                <p>Upload Files</p>
+                <p>11.11 GB Of 1 TB Used</p>
+            </div>
+            <div class="card">
+                <i class="material-icons">add_box</i><h2>Plugins</h2>
+                <img src="images/undraw_monitor_iqpq.svg" alt="">
+                <p>Manage Plugins</p>
+                <p>Total Plugins: <strong>1</strong></p>
+                <p>Updates Required: 1</p>
+            </div>
+            <div class="card">
+                <i class="material-icons">view_compact</i><h2>Themes</h2>
+                <img src="images/undraw_wireframing_nxyi.svg" alt="">
+                <p>Manage Themes</p>
+                <p>Edit Current Theme</p>
+                <p>Current Theme: Default</p>
+            </div>
+        </div>
+    </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
