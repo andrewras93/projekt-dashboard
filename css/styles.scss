@@ -1,3 +1,28 @@
+/* Variables. */
+
+/* Fonts: */
+$josefinSans: 'Josefin Sans';
+$inter: 'Inter';
+$thin: 100;
+$smallFont: 10px;
+
+/* Colors: */
+$darkGray: #353A43;
+$lightGray: #515C6D;
+$white: #fff;
+$green: #4EB24F;
+$blue: #2C609A;
+
+/* Spacing: */
+$smallSpacing: 8px;
+$mediumSpacing: 16px;
+$largeSpacing: 24px;
+$extraLargeSpacing: 48px; 
+
+
+/* --------------------------------------------------------------------- */
+
+
 /* Global. */
 
 *{
@@ -6,16 +31,151 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: $inter, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;  
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Material Icons. */
 
-/* Icons Color. */
+/* Icon Colors: */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-/* Icons Size. */
+/* Icon Sizes: */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
-/* Fonts. */
+/* Typography. */
+
+h1, h2{
+  font-family: $josefinSans, 'sans-serif';  
+}
+
+h2{
+  font-weight: $thin;  
+}
+
+
+/* --------------------------------------------------------------------- */
+
+
+/* Mobile Styles. */
+
+/* Global: */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: $mediumSpacing;       
+}
+
+/* Header: */
+header{
+  background: $darkGray;
+  grid-column: 1/6;  
+  display: flex;  
+  padding: $smallSpacing;
+  justify-content: space-between;  
+  
+  a:first-of-type{
+    display: none;
+  }
+
+  a:last-of-type{
+    font-size: $smallFont;
+    color: $white;       
+  }
+
+  nav{    
+    ul{
+      display: flex;           
+      li{
+        margin-right: $smallSpacing;        
+        a{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* Main: */
+main{
+  padding: $largeSpacing $smallSpacing;
+
+  h1{
+    color: $darkGray;
+  }
+  
+  #cards{
+    margin-top: $largeSpacing;
+
+    .card:nth-of-type(1){
+      background: $green;
+    }
+
+    .card:nth-of-type(2){
+      background: $blue;
+    }
+  }  
+  
+}
+
+@mixin cardStyles() {
+  grid-column: 1/6;
+  padding: $mediumSpacing;
+  background: $lightGray;
+  color: $white;  
+}
+
+.card{
+  @include cardStyles();  
+
+  .cardHeader{
+    margin-bottom: $largeSpacing;
+
+    h2{
+      display: inline;
+      text-decoration: underline;
+      margin-left: $smallSpacing;      
+    }
+  }
+
+  img{
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .cardContent{
+    margin-top: $largeSpacing
+  }
+
+  .cardFooter{
+    margin-top: $extraLargeSpacing;
+
+    p{
+      font-size: $smallFont;
+    }
+  }
+
+}
+
+
+/* --------------------------------------------------------------------- */
