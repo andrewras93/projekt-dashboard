@@ -1,29 +1,20 @@
-/* Variables. */
+/* Imports */
 
-/* Fonts: */
+@import "colors";
+
+/* Variables */
+
 $josefinSans: 'Josefin Sans';
 $inter: 'Inter';
 $thin: 100;
 $smallFont: 10px;
 
-/* Colors: */
-$darkGray: #353A43;
-$lightGray: #515C6D;
-$white: #fff;
-$green: #4EB24F;
-$blue: #2C609A;
-
-/* Spacing: */
 $smallSpacing: 8px;
 $mediumSpacing: 16px;
 $largeSpacing: 24px;
-$extraLargeSpacing: 48px; 
+$extraLargeSpacing: 48px;
 
-
-/* --------------------------------------------------------------------- */
-
-
-/* Global. */
+/* Global */
 
 *{
   margin: 0;
@@ -51,19 +42,13 @@ img{
   display: block;
 }
 
-/* Material Icons. */
-
-/* Icon Colors: */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-/* Icon Sizes: */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-
-/* Typography. */
 
 h1, h2{
   font-family: $josefinSans, 'sans-serif';  
@@ -73,20 +58,14 @@ h2{
   font-weight: $thin;  
 }
 
+/* Mobile Styles */
 
-/* --------------------------------------------------------------------- */
-
-
-/* Mobile Styles. */
-
-/* Global: */
 .grid{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: $mediumSpacing;       
 }
 
-/* Header: */
 header{
   background: $darkGray;
   grid-column: 1/6;  
@@ -116,7 +95,6 @@ header{
   }
 }
 
-/* Main: */
 main{
   padding: $largeSpacing $smallSpacing;
 
@@ -176,6 +154,3 @@ main{
   }
 
 }
-
-
-/* --------------------------------------------------------------------- */
