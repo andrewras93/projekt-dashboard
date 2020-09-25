@@ -74,7 +74,11 @@ header{
   grid-column: 1/6;  
   display: flex;  
   padding: $smallSpacing;
-  justify-content: space-between;  
+  justify-content: space-between;
+
+  i{
+    cursor: pointer;
+  }
   
   a:first-of-type{
     display: none;
@@ -82,7 +86,7 @@ header{
 
   a:last-of-type{
     font-size: $smallFont;
-    color: $white;       
+    color: $white;
   }
 
   nav{    
@@ -115,7 +119,8 @@ main{
   padding: $mediumSpacing;
   background: $lightGray;
   color: $white;
-  cursor: pointer;  
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-a{
@@ -197,11 +202,41 @@ main{
 
 /* Computer Styles */
 
-@media #{$computer}{  
+@media #{$computer}{
 
   .container{
     max-width: 1200px;
     margin: auto;
+  }
+
+  header{
+    padding: $largeSpacing;
+
+    a:last-of-type{
+      font-size: $smallFont + 2;
+    }
+
+    nav{
+      ul{
+        li{
+          display: flex;
+          align-items: center;
+          margin-right: $mediumSpacing;
+          i{
+            cursor: default;
+          }
+          a{
+            display: block !important;
+            margin-left: $smallSpacing;
+            font-size: $smallFont + 2 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .grid{
+    gap: $largeSpacing;
   }
 
 }
