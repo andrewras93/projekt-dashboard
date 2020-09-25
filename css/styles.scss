@@ -14,6 +14,9 @@ $mediumSpacing: 16px;
 $largeSpacing: 24px;
 $extraLargeSpacing: 48px;
 
+$tablet: "screen and (min-width: 768px)";
+$computer: "screen and (min-width: 1200px)";
+
 /* Global */
 
 *{
@@ -51,7 +54,7 @@ img{
 .material-icons.md-48 { font-size: 48px; }
 
 h1, h2{
-  font-family: $josefinSans, 'sans-serif';  
+  font-family: $josefinSans, 'sans-serif';   
 }
 
 h2{
@@ -103,28 +106,21 @@ main{
   }
   
   #cards{
-    margin-top: $largeSpacing;
-
-    .card:nth-of-type(1){
-      background: $green;
-    }
-
-    .card:nth-of-type(2){
-      background: $blue;
-    }
+    margin-top: $largeSpacing;    
   }  
-  
 }
 
 @mixin cardStyles() {
   grid-column: 1/6;
   padding: $mediumSpacing;
   background: $lightGray;
-  color: $white;  
+  color: $white;
+  cursor: pointer;  
 }
 
-.card{
-  @include cardStyles();  
+.card-a{
+  @include cardStyles();
+  background: $green;  
 
   .cardHeader{
     margin-bottom: $largeSpacing;
@@ -151,6 +147,61 @@ main{
     p{
       font-size: $smallFont;
     }
+  }
+
+}
+
+.card-b{
+  @extend .card-a;
+  background: $blue;
+}
+
+.card-c{
+  @extend .card-a;
+  background: $lightGray;
+}
+
+.card-d{
+  @extend .card-c;
+}
+
+/* Tablet Styles */
+
+@media #{$tablet}{
+
+  .grid{
+    grid-template-columns: repeat(8, 1fr);      
+  }
+
+  header{
+    grid-column: 1/9;    
+  }
+  
+  .card-a{
+    grid-column: 1/5;
+  }
+
+  .card-b{
+    grid-column: 5/9;
+
+    img{
+      max-width: 44.2%;
+    }
+  }
+
+  .card-d{
+    grid-column: 5/9;
+  }
+
+}
+
+/* Computer Styles */
+
+@media #{$computer}{  
+
+  .container{
+    max-width: 1200px;
+    margin: auto;
   }
 
 }
